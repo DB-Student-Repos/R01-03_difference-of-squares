@@ -1,0 +1,1 @@
+/mnt/c/Users/enech/Documents/GitHub/r01-03-difference-of-squares-Boves556/target/debug/libdifference_of_squares.rlib: /mnt/c/Users/enech/Documents/GitHub/r01-03-difference-of-squares-Boves556/src/lib.rs
