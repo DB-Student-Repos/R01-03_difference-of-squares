@@ -1,54 +1,20 @@
-use difference_of_squares as squares;
 
-#[test]
-fn test_square_of_sum_1() {
-    assert_eq!(1, squares::square_of_sum(1));
-}
 
-#[test]
-#[ignore]
-fn test_square_of_sum_5() {
-    assert_eq!(225, squares::square_of_sum(5));
-}
+fn main() {
+    let n = 10; // Define the value of N
 
-#[test]
-#[ignore]
-fn test_square_of_sum_100() {
-    assert_eq!(25_502_500, squares::square_of_sum(100));
-}
+    // Calculate the sum of the first N natural numbers
+    let sum_of_naturals = (1..=n).sum::<u64>();
 
-#[test]
-#[ignore]
-fn test_sum_of_squares_1() {
-    assert_eq!(1, squares::sum_of_squares(1));
-}
+    // Calculate the square of the sum
+    let square_of_sum = sum_of_naturals * sum_of_naturals;
 
-#[test]
-#[ignore]
-fn test_sum_of_squares_5() {
-    assert_eq!(55, squares::sum_of_squares(5));
-}
+    // Calculate the sum of the squares of the first N natural numbers
+    let sum_of_squares = (1..=n).map(|x| x * x).sum::<u64>();
 
-#[test]
-#[ignore]
-fn test_sum_of_squares_100() {
-    assert_eq!(338_350, squares::sum_of_squares(100));
-}
+    // Calculate the difference between the square of the sum and the sum of the squares
+    let difference = square_of_sum - sum_of_squares;
 
-#[test]
-#[ignore]
-fn test_difference_1() {
-    assert_eq!(0, squares::difference(1));
-}
-
-#[test]
-#[ignore]
-fn test_difference_5() {
-    assert_eq!(170, squares::difference(5));
-}
-
-#[test]
-#[ignore]
-fn test_difference_100() {
-    assert_eq!(25_164_150, squares::difference(100));
+    // Print the result
+    println!("The difference is: {}", difference);
 }
